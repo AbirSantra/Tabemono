@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Navbar.css";
 import navlogo from "../img/tabemonologoblack.png";
+import {
+  faBookOpen,
+  faCircleInfo,
+  faImage,
+  faSquarePhone,
+  faUtensils,
+  faBars,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Navbar = () => {
+  const [menu, setMenu] = useState(false);
+  const toggleMenu = () => {
+    setMenu((prev) => !prev);
+  };
+
   return (
     <nav className="navbar">
       <div className="container navbar__container">
@@ -22,6 +36,54 @@ const Navbar = () => {
           <div className="navbar__links--link">Gallery</div>
           <div className="navbar__links--link">Contact</div>
           <button className="navbar__links--btn">Book Table</button>
+          <FontAwesomeIcon
+            icon={faBars}
+            className="navbar__links--menu"
+            onClick={toggleMenu}
+          />
+        </div>
+      </div>
+      <div
+        className={
+          menu
+            ? "container navbar__mobile--container slide-up"
+            : "container navbar__mobile--container"
+        }
+      >
+        <div className="navbar__mobile--links">
+          <FontAwesomeIcon
+            icon={faBookOpen}
+            className="navbar__mobile--link--icon"
+          />
+          <p className="navbar__mobile--link--text">Menu</p>
+        </div>
+        <div className="navbar__mobile--links">
+          <FontAwesomeIcon
+            icon={faCircleInfo}
+            className="navbar__mobile--link--icon"
+          />
+          <p className="navbar__mobile--link--text">About</p>
+        </div>
+        <div className="navbar__mobile--links">
+          <FontAwesomeIcon
+            icon={faImage}
+            className="navbar__mobile--link--icon"
+          />
+          <p className="navbar__mobile--link--text">Gallery</p>
+        </div>
+        <div className="navbar__mobile--links">
+          <FontAwesomeIcon
+            icon={faSquarePhone}
+            className="navbar__mobile--link--icon"
+          />
+          <p className="navbar__mobile--link--text">Contact</p>
+        </div>
+        <div className="navbar__mobile--links">
+          <FontAwesomeIcon
+            icon={faUtensils}
+            className="navbar__mobile--link--icon"
+          />
+          <p className="navbar__mobile--link--text">Book</p>
         </div>
       </div>
     </nav>

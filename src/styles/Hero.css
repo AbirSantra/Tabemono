@@ -9,7 +9,7 @@
 .hero__container {
   width: 100%;
   height: 100%;
-  padding: 4rem;
+  padding: 4rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,7 +32,7 @@
 }
 
 .hero__text--subheading {
-  color: var(--blue);
+  color: var(--brown);
 }
 
 .hero__text--btn {
@@ -46,6 +46,10 @@
   padding: 0.7rem 1.2rem;
   border: 2px solid var(--yellow);
   border-radius: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
   cursor: pointer;
   transition: all 0.25s ease;
 }
@@ -60,16 +64,12 @@
   position: relative;
   flex: 1;
   width: 100%;
-  min-width: 600px;
-  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .hero__image--blob {
-  position: absolute;
-  left: 30px;
   z-index: 1;
   width: 100%;
 }
@@ -77,12 +77,35 @@
 .hero__image--img {
   z-index: 2;
   position: absolute;
-  width: 80%;
+  width: 100%;
+  max-width: 500px;
   opacity: 0;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 
 .hero__image--img--active {
   opacity: 1;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+@media screen and (max-width: 900px) {
+  .hero__container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero__container--text {
+    min-width: 0;
+  }
+
+  .hero__container--image {
+    min-width: 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .hero__text--heading {
+    font-size: 2.5rem;
+  }
 }

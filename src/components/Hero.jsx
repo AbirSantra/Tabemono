@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "../styles/Hero.css";
-// import ramen from "../img/hero-ramen.png";
 import blob from "../img/hero-blob.png";
 import { heroImages } from "../api/hero-images";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
   const [idx, setIdx] = useState(0);
@@ -15,7 +16,7 @@ const Hero = () => {
 
   return (
     <div className="hero">
-      <div className="container hero__container">
+      <div className="hero__container container">
         {/* Hero Text */}
         <div className="hero__container--text">
           <h1 className="hero__text--heading">
@@ -26,7 +27,10 @@ const Hero = () => {
             Chefs right here in India only at Tabemono &copy;. Reserve your
             tables at your nearest Tabemono outlet now!
           </p>
-          <button className="hero__text--btn">View Menu</button>
+          <button className="hero__text--btn">
+            View Menu
+            <FontAwesomeIcon icon={faCaretRight} />
+          </button>
         </div>
         {/* Hero Image */}
         <div className="hero__container--image">

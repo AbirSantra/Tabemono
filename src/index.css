@@ -3,9 +3,10 @@
   --gray: #dee2e6;
   --blue: #003049ff;
   --red: #d62828ff;
+  --brown: #584633;
   --orange: #f77f00ff;
   --yellow: #fcbf49ff;
-  --lemon: rgb(250, 246, 228);
+  --lemon: #fcf9ee;
 }
 
 *,
@@ -41,4 +42,16 @@ ul {
 
 .section {
   padding: 7rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    padding: 0 1.5rem;
+  }
 }
