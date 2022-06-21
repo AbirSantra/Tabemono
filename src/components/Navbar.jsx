@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/Navbar.css";
 import navlogo from "../img/tabemonologoblack.png";
 import {
-  faBookOpen,
+  faCalendarCheck,
   faCircleInfo,
   faImage,
   faSquarePhone,
@@ -52,7 +52,7 @@ const Navbar = () => {
       >
         <div className="navbar__mobile--links">
           <FontAwesomeIcon
-            icon={faBookOpen}
+            icon={faUtensils}
             className="navbar__mobile--link--icon"
           />
           <p className="navbar__mobile--link--text">Menu</p>
@@ -80,7 +80,7 @@ const Navbar = () => {
         </div>
         <div className="navbar__mobile--links">
           <FontAwesomeIcon
-            icon={faUtensils}
+            icon={faCalendarCheck}
             className="navbar__mobile--link--icon"
           />
           <p className="navbar__mobile--link--text">Book</p>

@@ -1,6 +1,14 @@
 import React from "react";
 import "../styles/Services.css";
 import chef from "../img/services-chef.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBowlFood,
+  faChampagneGlasses,
+  faClock,
+  faTruck,
+  faCaretRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Services = () => {
   return (
@@ -25,6 +33,42 @@ const Services = () => {
             aut rerum saepe ut ipsa voluptatum quaerat, facere delectus commodi
             voluptate?
           </p>
+          <div className="services__text--features">
+            <div className="services__feature--container">
+              <FontAwesomeIcon
+                icon={faClock}
+                className="services__feature--icon"
+              />
+              <p className="services__feature--label">We are Open 24/7</p>
+            </div>
+            <div className="services__feature--container">
+              <FontAwesomeIcon
+                icon={faChampagneGlasses}
+                className="services__feature--icon"
+              />
+              <p className="services__feature--label">Bar Available</p>
+            </div>
+            <div className="services__feature--container">
+              <FontAwesomeIcon
+                icon={faBowlFood}
+                className="services__feature--icon"
+              />
+              <p className="services__feature--label">Top Quality Food</p>
+            </div>
+            <div className="services__feature--container">
+              <FontAwesomeIcon
+                icon={faTruck}
+                className="services__feature--icon"
+              />
+              <p className="services__feature--label">
+                Takeout & Delivery available
+              </p>
+            </div>
+          </div>
+          <button className="services__text--btn">
+            Learn More
+            <FontAwesomeIcon icon={faCaretRight} />
+          </button>
         </div>
       </div>
     </div>

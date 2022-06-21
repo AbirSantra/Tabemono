@@ -3,6 +3,7 @@ import Services from "../components/Services";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import "../styles/Homepage.css";
+import Testimonial from "../components/Testimonial";
 
 const Homepage = () => {
   return (
@@ -10,6 +11,7 @@ const Homepage = () => {
       <Navbar />
       <Hero />
       <Services />
+      <Testimonial />
     </div>
   );
 };
