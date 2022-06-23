@@ -60,6 +60,32 @@
   transition: all 0.25s ease;
 }
 
+.hero__text--stats {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.hero__text--stat {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.hero__stat--num {
+  color: var(--gray);
+  font-size: 1.5rem;
+}
+
+.hero__stat--label {
+  color: var(--gray);
+  font-size: 0.8rem;
+}
+
 .hero__container--image {
   position: relative;
   flex: 1;

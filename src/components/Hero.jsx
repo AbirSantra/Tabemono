@@ -31,6 +31,20 @@ const Hero = () => {
             View Menu
             <FontAwesomeIcon icon={faCaretRight} />
           </button>
+          <div className="hero__text--stats">
+            <div className="hero__text--stat">
+              <h3 className="hero__stat--num">500+</h3>
+              <p className="hero__stat--label">Positive Reviews</p>
+            </div>
+            <div className="hero__text--stat">
+              <h3 className="hero__stat--num">10+</h3>
+              <p className="hero__stat--label">World Class Chefs</p>
+            </div>
+            <div className="hero__text--stat">
+              <h3 className="hero__stat--num">25+</h3>
+              <p className="hero__stat--label">Awards Won</p>
+            </div>
+          </div>
         </div>
         {/* Hero Image */}
         <div className="hero__container--image">
