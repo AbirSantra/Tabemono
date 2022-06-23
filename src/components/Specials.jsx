@@ -19,11 +19,10 @@ const Specials = () => {
       <div
         style={{
           borderRadius: "10px",
-          marginBottom: "-20px",
           padding: "0px",
         }}
       >
-        <ul style={{ margin: "0px" }}> {dots} </ul>
+        <ul style={{ margin: "-10px" }}> {dots} </ul>
       </div>
     ),
     arrows: false,
@@ -64,24 +63,26 @@ const Specials = () => {
         <div className="specials__slider--container">
           <Slider {...settings}>
             {specialMenu.map((item, index) => (
-              <div className="specials__card" key={index}>
-                <div className="specials__card--image">
-                  <img src={item.img} alt="ramen" />
-                </div>
-                <h3 className="specials__card--name">{item.name}</h3>
-                <div className="specials__card--cat-rate">
-                  <p className="specials__card--category">{item.category}</p>
-                  <p className="specials__card--rating">
-                    {item.rating}
-                    <FontAwesomeIcon
-                      icon={faStar}
-                      className="specials__card--rating-star"
-                    />
-                  </p>
-                </div>
-                <div className="specials__card--prices">
-                  <p className="specials__card-price">{item.price}</p>
-                  <p className="specials__card-disc">{item.dis}</p>
+              <div className="specials__card--container">
+                <div className="specials__card" key={index}>
+                  <div className="specials__card--image">
+                    <img src={item.img} alt="ramen" />
+                  </div>
+                  <h3 className="specials__card--name">{item.name}</h3>
+                  <div className="specials__card--cat-rate">
+                    <p className="specials__card--category">{item.category}</p>
+                    <p className="specials__card--rating">
+                      {item.rating}
+                      <FontAwesomeIcon
+                        icon={faStar}
+                        className="specials__card--rating-star"
+                      />
+                    </p>
+                  </div>
+                  <div className="specials__card--prices">
+                    <p className="specials__card-price">{item.price}</p>
+                    <p className="specials__card-disc">{item.dis}</p>
+                  </div>
                 </div>
               </div>
             ))}
